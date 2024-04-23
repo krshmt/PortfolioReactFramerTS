@@ -1,6 +1,12 @@
-body, html{
+.projets{
     background-color: #FFF;
-    color: black;
-    margin: 0;
+    color: #000;
+    margin: 5rem 10rem;
     padding: 0;
+    font-weight: 400;
+    font-size: 1.3rem;
 }
+
+.white-background {
+    background-color: white;
+  } 
