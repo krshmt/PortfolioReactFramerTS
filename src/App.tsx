@@ -1,11 +1,9 @@
 import './App.css'
-import Componant from './composants/Composant'
+import Chargement from './composants/Chargement'
 
 function App() {
   return (
-    <>
-      <Componant/>
-    </>
+    <Chargement />
   )
 }
 

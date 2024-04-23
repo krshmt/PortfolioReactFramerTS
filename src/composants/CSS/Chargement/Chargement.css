@@ -1,0 +1,23 @@
+.portfolio__container {
+    overflow: hidden; /* Pour cacher la barre de défilement */
+}
+
+.portfolio__developpeur__etudiant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 125%;
+}   
+
+.portfolio__bar {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.portfolio__bar > * {
+    flex-basis: 45%;
+}
