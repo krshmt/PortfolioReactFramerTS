@@ -54,9 +54,9 @@ function Projets() {
   return (
     <>
       <motion.div
-        transition={{ duration: 0.7 }}
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.9 }}
+        initial={{opacity: 0 }}
+        animate={{opacity: 1 }}
         className="projets"
       >
         <div className="description__page">
@@ -72,7 +72,7 @@ function Projets() {
               <img src={ listeImages[projet.id] } alt={projet.nom} className="projet-image" />
               <div className="projet-info">
                 <h3 className="nom__projet">{projet.nom}</h3>
-                <p>{projet.realisation}</p>
+                <p className="realisation">{projet.realisation}</p>
               </div>
             </div>
           ))}

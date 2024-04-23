@@ -6,9 +6,9 @@ function Moi() {
   return (
     <>
       <motion.div
-        transition={{ duration: 0.7 }}
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.9 }}
+        initial={{opacity: 0 }}
+        animate={{opacity: 1 }}
       >
         <div>
           <h1>À propos de moi</h1>
