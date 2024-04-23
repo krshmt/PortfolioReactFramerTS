@@ -1,0 +1,64 @@
+{
+    "projets" : [
+        {
+            "id" : 0,
+            "nom" : "Site Dior",
+            "realisation" : "Autonome",
+            "imageProjet" : "./IMG/Gris_Dior.jpg",
+            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
+            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
+            "langages" : ["HTML", "CSS"],
+            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+        },
+        {
+            "id" : 1,
+            "nom" : "Ancien Portfolio",
+            "realisation" : "Autonome",
+            "imageProjet" : "./IMG/Gris_Dior.jpg",
+            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
+            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
+            "langages" : ["HTML", "CSS"],
+            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+        },
+        {
+            "id" : 2,
+            "nom" : "Escrime",
+            "realisation" : "Deuxième année",
+            "imageProjet" : "./IMG/Gris_Dior.jpg",
+            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
+            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
+            "langages" : ["HTML", "CSS"],
+            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+        },
+        {
+            "id" : 3,
+            "nom" : "Spot'Music",
+            "realisation" : "Deuxième année",
+            "imageProjet" : "./IMG/Gris_Dior.jpg",
+            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
+            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
+            "langages" : ["HTML", "CSS"],
+            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+        },
+        {
+            "id" : 4,
+            "nom" : "VintIK",
+            "realisation" : "Autonome",
+            "imageProjet" : "./IMG/Gris_Dior.jpg",
+            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
+            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
+            "langages" : ["HTML", "CSS"],
+            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
+            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+        }
+    ]
+}
