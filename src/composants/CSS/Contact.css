@@ -1,0 +1,135 @@
+.main__contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 23%;
+    gap: 15%;
+}
+
+.main__contact > *{
+    flex-basis: 45%;
+}
+
+.contact__p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+form{
+    border: thin solid white;
+    border-radius: 10px;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.05);
+    max-height: 30rem;
+}
+
+input{
+    padding: 1%;
+    margin-bottom: 1em;
+    background : none;
+    border: none;
+    border-bottom: thin solid rgb(128, 128, 128);
+    height: 2rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}   
+
+input::placeholder{
+    color: rgb(128, 128, 128);
+    font-family: "Poppins", sans-serif;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: thin solid rgb(255, 255, 255);
+}
+
+input:focus::placeholder{
+    color: white;
+}
+
+textarea{
+    padding: 1%;
+    margin-bottom: 1em;
+    background : none;
+    border: none;
+    border-bottom: thin solid rgb(128, 128, 128);;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    resize: vertical;
+    max-height: 18rem;
+    min-height: 3.5rem;
+}
+
+textarea::placeholder{
+    color: rgb(128, 128, 128);
+    font-family: "Poppins", sans-serif;
+}
+
+textarea:focus::placeholder{
+    color: white;
+}
+
+textarea:focus{
+    outline: none;
+    border-bottom: thin solid rgb(255, 255, 255);
+}
+
+.btn__envoyer{
+    padding: 1%;
+    width: 40%;
+    background: none;
+    color: rgb(128, 128, 128);
+    border: none;
+    border-bottom: thin solid rgb(128, 128, 128);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn__envoyer:hover{
+    color: white;
+    border-bottom: thin solid white;
+}
+
+.liens__contact{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn__center{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.lien__reseau {
+    color: white;
+    font-weight: 200;
+    position: relative; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.lien__reseau::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px; 
+    background-color: white; 
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+}
+
+.lien__reseau:hover::after {
+    width: 100%; 
+}

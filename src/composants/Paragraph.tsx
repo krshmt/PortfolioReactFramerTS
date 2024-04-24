@@ -6,7 +6,7 @@ function Paragraph({ value }: { value: string }) {
   const element = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: [1, 0.25],
+    offset: [1, 0.1],
   });
 
   const mots = value.split(" ");
@@ -28,7 +28,12 @@ function Paragraph({ value }: { value: string }) {
 
 function Mot({ children, range, progress }: { children: string; range: number[]; progress: any }) {
   const opacity = useTransform(progress, range, [0, 1]);
-  return <motion.span style={{ opacity }} className="mot">{children}</motion.span>;
+  return (
+    <span className="mot">
+      <span className="shadow">{children}</span>
+        <motion.span style={{ opacity }}>{children}</motion.span>
+    </span>
+);
 }
 
 export default Paragraph;

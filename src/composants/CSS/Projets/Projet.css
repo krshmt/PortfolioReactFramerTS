@@ -7,11 +7,6 @@
     font-size: 1.3rem;
 }
 
-.white-background {
-    background-color: white;
-    transition: all 1s ease-in-out;
-}
-
 .liste__projets {
     color: #000;
     font-weight: 400;
@@ -128,3 +123,8 @@
     background-color: transparent;
     border: none;
   } 
+
+
+  .gestion__select{
+    display: none;
+  }

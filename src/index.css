@@ -10,3 +10,18 @@ html, body {
   font-weight: 100;
   font-style: normal;
 }
+
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: black transparent; 
+}
+
+.white-background {
+  background-color: white;
+  transition: all 0.7s ease-in-out;
+}
+
+.black-background {
+  background-color: #080808;
+  transition: all 0.7s ease-in-out;
+}

@@ -29,7 +29,7 @@ function Projets() {
     if (headerElement && liens.length > 0) {
       headerElement.style.backgroundColor = "rgba(0, 0, 0, 0.12)";
       liens.forEach((lien) => {
-        lien.style.color = "black";
+        (lien as HTMLElement).style.color = "black";
       });
     }
 
@@ -51,7 +51,7 @@ function Projets() {
       if (headerElement && liens.length > 0) {
         headerElement.style.backgroundColor = "";
         liens.forEach((lien) => {
-          lien.style.color = "";
+          (lien as HTMLElement).style.color = "";
         });
       }
       if (appElement) {
@@ -76,9 +76,9 @@ function Projets() {
   return (
     <>
       <motion.div
-        transition={{ duration: 0.3, delay: 1.1 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        transition={{duration: 0.8, delay:0.7}}
+        initial={{y: 100, opacity: 0 }}
+        animate={{y: 0,  opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 3 }, y: 100}}
         className="projets"
       >
@@ -117,6 +117,20 @@ function Projets() {
           </button>
         </div>
 
+        <div className="gestion__select">
+          <select
+            value={typeProjet}
+            onChange={(e) => handleTypeSelection(e.target.value)}
+            className="select-style"
+          >
+            <option value="Tous">Tous les projets</option>
+            <option value="Autonome">Projets Autonomes</option>
+            <option value="Projet Universitaire">Projets Universitaires</option>
+            <option value="Projet Stage">Projets de Stage</option>
+          </select>
+        </div>
+
+
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -127,7 +141,7 @@ function Projets() {
           {projetsFiltres.map((projet) => (
             <Link
               key={projet.id}
-              to={`/projet/${projet.id}`}
+              to={`/Projet/${projet.id}`}
               className="projet-card"
             >
               <div className="projet-card">

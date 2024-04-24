@@ -1,0 +1,77 @@
+.div__centrage{
+    margin: 0 10%;
+    font-weight: 200;
+}
+
+.main{
+    margin-top: 15rem;
+    animation: slideUp 1s ease-in;
+    margin-right: 50%;
+}
+
+.titre__accueil{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-weight: 200;
+}
+
+.paragraphe__accueil{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn__projets__savoir__plus{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 5rem;
+}
+
+.btn__projets__savoir__plus a:first-child{
+    padding: 1rem 2rem;
+    background-color: black;
+    border: thin solid black;
+    border-radius: 10px;
+}
+
+.btn__projets__savoir__plus a:last-child{
+    border: thin solid white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.lienAccueil{
+    color: white;
+    text-decoration: none;
+}
+
+
+.custom-cursor-home {
+    position: fixed;
+    pointer-events: none;
+    width: 150px; /* Initial size */
+    height: 150px;
+    border-radius: 50%;
+    background-color: white; /* Ensure text contrast */
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black; /* Text color */
+    font-size: 20px; /* Adjustable based on your design */
+    transition: width 0.3s ease, height 0.3s ease; /* Smooth resizing transition */
+    z-index: 1000;
+    font-weight: 300;
+  }
+  
+  .custom-cursor-home.shrink {
+    width: 70px; /* Smaller size when hovering over links */
+    height: 70px;
+  }
+  

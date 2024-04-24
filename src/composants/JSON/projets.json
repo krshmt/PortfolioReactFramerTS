@@ -40,5 +40,95 @@
             "lien" : "",
             "langages" : ["React", "TypeScript", "Framer Motion", "CSS"]
         }
-    ]
+    ],
+    "langages" : [
+        {
+          "img": {
+            "src": "ImgReact",
+            "alt": ""
+          },
+          "h3": "React",
+          "p": {
+            "className": "description__competence",
+            "text": "Un framework JavaScript me permettant de faire des applications web. Il m'a permit de faire ce Portfolio et va me permettre de faire une application pour simuler un site de vêtements pour une entreprise"
+          }
+        },
+        {
+          "img": {
+            "src": "ImgFrameMotion",
+            "alt": ""
+          },
+          "h3": "Framer Motion",
+          "p": {
+            "className": "description__competence",
+            "text": "Nouvelle compétence acquérit pour faire la plupart des animations du site. Indispensable lors de la création d'applications WEB avec React"
+          }
+        },
+        {
+          "img": {
+            "src": "ImgTypeScript",
+            "alt": ""
+          },
+          "h3": "TypeScript",
+          "p": {
+            "className": "description__competence",
+            "text": "Nouvelle compétence obtenu grace à ce Portfolio. Son grand avantage, le typage assez forcé des variables. Il permet de mieux débugger le code."
+          }
+        },
+        {
+          "img": {
+            "src": "ImgReact",
+            "alt": ""
+          },
+          "h3": "HTML",
+          "p": {
+            "className": "description__competence",
+            "text": "Un site WEB commence forcément avec du HTML. Permet de faire le squette de mon application"
+          }
+        },
+        {
+          "img": {
+            "src": "ImgReact",
+            "alt": ""
+          },
+          "h3": "CSS",
+          "p": {
+            "className": "description__competence",
+            "text": "J'utilise CSS pour le placement de mes balises HTML, les transitions et animations en complément de Framer Motion"
+          }
+        },
+        {
+          "img": {
+            "src": "ImgReact",
+            "alt": ""
+          },
+          "h3": "JavaScript",
+          "p": {
+            "className": "description__competence",
+            "text": "Javascript, le langage indispensable pour tout développeur Front-End. Il me permet de rendre mon site dynamique et de faire des animations. Permet aussi de faire le lien entre la base de données et le Front-End"
+          }
+        },
+        {
+          "img": {
+            "src": "ImgReact",
+            "alt": ""
+          },
+          "h3": "Figma",
+          "p": {
+            "className": "description__competence",
+            "text": "L'outil indispensable pour tout développeur Front-End. Il me permet de faire des maquettes avec des animations pour avoir un rendu final de mon application avant de la coder."
+          }
+        },
+        {
+          "img": {
+            "src": "ImgReact",
+            "alt": ""
+          },
+          "h3": "Git",
+          "p": {
+            "className": "description__competence",
+            "text": "Outil de versionning indispensable pour tout développeur. Il me permet de sauvegarder mon code et de travailler en équipe sur un même projet."
+          }
+        }
+      ]
 }
