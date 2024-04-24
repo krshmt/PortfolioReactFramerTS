@@ -1,35 +1,19 @@
-import React from "react";
-import { motion, useTransform, useMotionValue, useScroll } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, useScroll } from "framer-motion";
 import "./CSS/Moi.css";
+import Paragraph from "./Paragraph";
 
-function Moi() {  
+const paragraphe = "Bonjour, je suis Kris. Je suis en deuxième année de BUT Informatique à Orléans et je suis en recherche d'un contrat d'apprentissage dans une agence WEB"
+
+function Moi() {
   return (
-    <div className="informations__content">
-      <div className="information information1">
-        <motion.p
-          initial={{ opacity: 1 }}
-          whileInView={{ opacity: 0 }}
-          viewport={{
-            amount: "all",
-          }}
-          className="parag"
-        >
-          Je suis en deuxième année de BUT Informatique à Orléans
-        </motion.p>
-      </div>
-      <div className="information information1">
-        <motion.p
-          initial={{ opacity: 1 }}
-          whileInView={{ opacity: 0 }}
-          viewport={{
-            amount: "all",
-          }}
-          className="parag"
-        >
-          Je suis en deuxième année de BUT Informatique à Orléans
-        </motion.p>
-      </div>
-    </div>
+    <>
+    <main>
+      <div style={{height:"100vh"}}></div>
+      <Paragraph value={paragraphe} />
+      <div style={{height:"100vh"}}></div>
+    </main>
+    </>
   );
 }
 

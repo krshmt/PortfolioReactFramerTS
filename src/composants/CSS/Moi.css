@@ -1,9 +1,17 @@
-.information{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+main{
+    margin: 0 20%;
 }
 
-.parag{
-    color: red;
+main p{
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1;
+}
+
+.mot{
+    margin-right: 12px;
+    margin-top: 12px;
 }
