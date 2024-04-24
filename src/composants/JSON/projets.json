@@ -4,61 +4,41 @@
             "id" : 0,
             "nom" : "Site Dior",
             "realisation" : "Autonome",
-            "imageProjet" : "./IMG/Gris_Dior.jpg",
-            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
+            "description" : "Site de la marque Dior, réalisé en HTML et CSS. Ce site à était réalisé durant ma première année de BUT Informatique. Je l'ai fait afin de m'améliorer sur les HTML et CSS",
             "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
-            "langages" : ["HTML", "CSS"],
-            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+            "langages" : ["HTML", "CSS"]
         },
         {
             "id" : 1,
             "nom" : "Ancien Portfolio",
             "realisation" : "Autonome",
-            "imageProjet" : "./IMG/Gris_Dior.jpg",
-            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
-            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
-            "langages" : ["HTML", "CSS"],
-            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+            "description" : "Deuxième Portfolio réalisé à la fin de ma première année de BUT Informatique. Ce site avait plusieurs objectifs. Le premier était de montrer mes compétences en développement WEB en montrant mes projets académiques mais aussi pour montrer mes compétences en design. J'ai donc réalisé ce site en HTML, CSS et JavaScript. Le site utilise le scroll snap",
+            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/HTML/index.html",
+            "langages" : ["HTML", "CSS", "JavaScript"]
         },
         {
             "id" : 2,
             "nom" : "Escrime",
-            "realisation" : "Deuxième année",
-            "imageProjet" : "./IMG/Gris_Dior.jpg",
-            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
-            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
-            "langages" : ["HTML", "CSS"],
-            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+            "realisation" : "Projet Universitaire",
+            "description" : "Projet réalisé en 5 semaines en groupe de 5 personnes. Application réalisé en FLASK, HTML, CSS et Javascript. Cette dernière avait pour objectif de digitaliser la gestion d'une compétition d'escrime pour le club d'escrime de Blois. Dans ce projet, j'ai eu l'opportunité d'être développeur Front-end. J'ai pu gérer la réalisation des maquettes jusqu'à la réalisation du Front-end de l'application",
+            "lien" : "https://github.com/araviart/COMP_ESCRIME",
+            "langages" : ["HTML", "CSS", "Flask", "JavaScript"]
         },
         {
             "id" : 3,
             "nom" : "Spot'Music",
-            "realisation" : "Deuxième année",
-            "imageProjet" : "./IMG/Gris_Dior.jpg",
-            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
-            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
-            "langages" : ["HTML", "CSS"],
-            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+            "realisation" : "Projet Universitaire",
+            "description" : "Projet réalisé en 3 semaines en équipe de 2 personnes. Application WEB réalisé en PHP, CSS, JavaScript et SQLITE qui a pour but de consulter des albums, des artistes, les détails de ces derniers ainsi que leur titres. Elle comprend aussi des éléments dynamiques comme la barre de recherche, l'ajout de titres dans nos coups de cœur, l'ajout de titres dans une playlist crée par l'utilisateur ou bien des animations pour la connexion/inscription. Pour finir, l'application contient un module administrateur pour faire un CRUD sur nos artistes/albums.",
+            "lien" : "https://github.com/RemiBly/SAEWebPHP",
+            "langages" : ["PHP", "CSS", "JavaScript", "SQLITE"]
         },
         {
             "id" : 4,
             "nom" : "VintIK",
             "realisation" : "Autonome",
-            "imageProjet" : "./IMG/Gris_Dior.jpg",
-            "description" : "Site de la marque Dior, réalisé en HTML et CSS.",
-            "lien" : "https://krshmt.github.io/portfolio-premiere-annee/OLD-PROJECTS/site_dior/html/Site%20internet%20dior.html",
-            "langages" : ["HTML", "CSS"],
-            "imageProjetDetail1" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail2" : "./IMG/Gris_Dior.jpg",
-            "imageProjetDetail3" : "./IMG/Gris_Dior.jpg"
+            "description" : "En cours :)",
+            "lien" : "",
+            "langages" : ["React", "TypeScript", "Framer Motion", "CSS"]
         }
     ]
 }

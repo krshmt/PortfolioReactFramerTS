@@ -1,7 +1,7 @@
 .projets {
     background-color: #FFF;
     color: #000;
-    margin: 5rem 20%;
+    margin: 3rem 20%;
     padding: 0;
     font-weight: 400;
     font-size: 1.3rem;
@@ -9,6 +9,7 @@
 
 .white-background {
     background-color: white;
+    transition: all 1s ease-in-out;
 }
 
 .liste__projets {
@@ -93,3 +94,37 @@
     padding: 2% 5%;
     border-radius: 100px;
 }
+
+.gestion__btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3%;
+    color: #3d3d3d;
+}
+
+.gestion__btn button{
+    font-family: "Poppins", sans-serif;
+    font-size: 70%;
+}
+
+.gestion__btn button:not(.selected){
+    border: none;
+    color: #3d3d3d;
+    background-color: transparent;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.selected {
+    color: #000;
+    background-color: transparent;
+    border: none; 
+    border-bottom: thin solid black;
+  }
+  
+  .gestion__btn button:not(.selected):hover {
+    color: #000 ;
+    background-color: transparent;
+    border: none;
+  } 

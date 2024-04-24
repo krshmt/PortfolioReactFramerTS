@@ -7,12 +7,15 @@ import Home from "./composants/Home";
 import Projets from "./composants/Projets";
 import Moi from "./composants/Moi";
 import Contact from "./composants/Contact";
+import ProjetDetail from "./composants/ProjetDetail";
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: true
+      isLoading: true,
+      projets: []
     };
   }
 
@@ -22,22 +25,22 @@ class App extends React.Component {
       this.setState({ isLoading: false });
     }, 6000);
   }
+  
 
   render() {
     return (
       <div className="App">
-        {/* Afficher le composant de chargement tant que l'application est en cours de chargement */}
         {this.state.isLoading ? (
           <Chargement />
         ) : (
-          // Afficher le reste de l'application une fois le chargement terminé
           <Router>
             <Header />
             <Switch>
               <Route path="/" exact component={Home} />
-              <Route path="/Projets" component={Projets} />
-              <Route path="/Moi" component={Moi} />
-              <Route path="/Contact" component={Contact} />
+              <Route path="/Projets" exact component={Projets} />
+              <Route path="/Moi" exact component={Moi} />
+              <Route path="/Contact" exact component={Contact} />
+              <Route path="/projet/:id" exact component={ProjetDetail} />
             </Switch>
           </Router>
         )}

@@ -1,0 +1,9 @@
+.information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parag{
+    color: red;
+}
