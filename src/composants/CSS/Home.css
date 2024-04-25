@@ -5,7 +5,6 @@
 
 .main{
     margin-top: 5%;
-    animation: slideUp 1s ease-in;
     margin-right: 50%;
 }
 
@@ -75,3 +74,36 @@ a{
     font-weight: bold;
   }
   
+  @media screen and (max-width: 1160px){
+    .main{
+        margin-top: 5%;
+        animation: slideUp 1s ease-in;
+        margin-right: 0%;
+        text-align: center;
+    }
+    .div__centrage{
+        margin: 0 20%;
+        font-weight: 200;
+    }
+    .btn__projets__savoir__plus{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 960px){
+    .custom-cursor-home{
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 530px){
+    .titre__accueil{
+        font-size: 200%;
+        margin-bottom: 2rem;
+        font-weight: 200;
+    }
+  }

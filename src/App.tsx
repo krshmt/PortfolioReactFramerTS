@@ -8,7 +8,7 @@ import Projets from "./composants/Projets";
 import Moi from "./composants/Moi";
 import Contact from "./composants/Contact";
 import ProjetDetail from "./composants/ProjetDetail";
-
+import Test from "./composants/Test";
 
 class App extends React.Component {
   constructor(props) {
@@ -41,6 +41,7 @@ class App extends React.Component {
               <Route path="/Moi" exact component={Moi} />
               <Route path="/Contact" exact component={Contact} />
               <Route path="/projet/:id" exact component={ProjetDetail} />
+              <Route path="/test" exact component={Test} />
             </Switch>
           </Router>
         )}

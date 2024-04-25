@@ -25,3 +25,8 @@ html, body {
   background-color: #080808;
   transition: all 0.7s ease-in-out;
 }
+
+.test-background {
+  background-color: #F2F2F2;
+  transition: all 0.7s ease-in-out;
+}
