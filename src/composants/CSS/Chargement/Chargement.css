@@ -18,6 +18,17 @@
     align-items: center;
 }
 
-.portfolio__bar > * {
+.portfolio__bar > h2 {
     flex-basis: 45%;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.portfolio__bar > .content__bar {
+    flex-basis: 55%;
+    width: 100%;
+    height: 5px;
+    background-color: #333333;
+    border-radius: 20px;
+    overflow: hidden;
 }
