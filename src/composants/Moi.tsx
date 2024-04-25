@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";

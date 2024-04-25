@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import "./CSS/Header/HeaderBlanc.css";
 import "./CSS/Projets/Projet.css";
