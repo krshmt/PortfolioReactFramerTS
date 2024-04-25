@@ -5,7 +5,7 @@
 }
 
 main p {
-  font-size: 2.5rem;
+  font-size: 150%;
   font-weight: 400;
   margin: 2rem 0;
   display: flex;
@@ -37,7 +37,7 @@ main p {
 }
 
 .div__1:first-child {
-  height: 80vh;
+  height: 60vh;
   margin-bottom: 20vh;
 }
 
@@ -91,11 +91,11 @@ main p {
   padding: 2%;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.11);
-  height: 16rem;
+  min-height: 20%;
 }
 
 .description__competence {
-  font-size: 85%;
+  font-size: 0.75rem;
 }
 
 .competence img {

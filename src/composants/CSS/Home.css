@@ -4,19 +4,19 @@
 }
 
 .main{
-    margin-top: 15rem;
+    margin-top: 5%;
     animation: slideUp 1s ease-in;
     margin-right: 50%;
 }
 
 .titre__accueil{
-    font-size: 5rem;
+    font-size: 300%;
     margin-bottom: 2rem;
     font-weight: 200;
 }
 
 .paragraphe__accueil{
-    font-size: 1.5rem;
+    font-size: 125%;
     margin-bottom: 2rem;
 }
 
@@ -54,12 +54,11 @@ a{
 .custom-cursor-home {
     position: fixed;
     pointer-events: none;
-    width: 150px; /* Initial size */
-    height: 150px;
+    width: 30px; /* Initial size */
+    height: 30px;
     border-radius: 50%;
     background-color: white; /* Ensure text contrast */
     mix-blend-mode: difference;
-    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,7 +70,8 @@ a{
   }
   
   .custom-cursor-home.shrink {
-    width: 70px; /* Smaller size when hovering over links */
+    width: 70px; /* Bigger size when hovering over links */
     height: 70px;
+    font-weight: bold;
   }
   
