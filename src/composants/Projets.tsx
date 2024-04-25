@@ -39,9 +39,9 @@ function Projets() {
       appElement.classList.add("white-background");
     }
 
-    fetch("http://localhost:3000/projets")
+    fetch("https://krshmt.github.io/PortfolioReactFramerTS/src/composants/JSON/projets.json")
       .then((response) => response.json())
-      .then((data) => setProjets(data))
+      .then((data) => setProjets(data.projets))
       .catch((error) =>
         console.error("Erreur de chargement des projets", error)
       );
