@@ -5,7 +5,7 @@
 }
 
 main p {
-  font-size: 150%;
+  font-size: 1.7vw;
   font-weight: 400;
   margin: 2rem 0;
   display: flex;
@@ -76,6 +76,12 @@ main p {
   animation-iteration-count: infinite;
 }
 
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
 .liste__competence {
   min-height: 60vh;
   margin-bottom: 20vh;
@@ -129,5 +135,17 @@ main p {
 @media screen and (max-width:840px) {
   main p{
     font-size: 100%;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+
+  main p{
+    font-size: 1.5rem;
+  }
+
+  .titre__scroll{
+    text-align: center;
   }
 }
