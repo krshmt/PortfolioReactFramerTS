@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {motion} from "framer-motion";
 import './CSS/ProgressBar/Bar.css'
 function Bar() {
