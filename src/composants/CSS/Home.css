@@ -61,6 +61,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translate(-50%, -50%);
     color: black; /* Text color */
     font-size: 20px; /* Adjustable based on your design */
     transition: width 0.3s ease, height 0.3s ease; /* Smooth resizing transition */
@@ -69,8 +70,8 @@ a{
   }
   
   .custom-cursor-home.shrink {
-    width: 70px; /* Bigger size when hovering over links */
-    height: 70px;
+    width: 90px; /* Bigger size when hovering over links */
+    height: 90px;
     font-weight: bold;
   }
   

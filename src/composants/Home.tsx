@@ -12,8 +12,8 @@ function Home() {
 
     const moveCursor = (e) => {
       if (cursorRef.current) {
-        cursorRef.current.style.left = `${e.clientX}px`;
-        cursorRef.current.style.top = `${e.clientY}px`;
+        cursorRef.current.style.left = `${e.clientX+30}px`;
+        cursorRef.current.style.top = `${e.clientY+30}px`;
       }
     };
 
