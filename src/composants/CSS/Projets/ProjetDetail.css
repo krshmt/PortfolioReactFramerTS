@@ -17,8 +17,11 @@
 
 
 .langages{
-    flex-grow: 1;
     flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    flex-grow: 1;
 }
 .titre__langage{
     display: flex;
@@ -33,7 +36,6 @@
     padding: 2% 5%;
     font-size: 0.8rem;
     border-radius: 100px;
-    margin-right: 2rem;
 }
 
 .lien__voir__site{

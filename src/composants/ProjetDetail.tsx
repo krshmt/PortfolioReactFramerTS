@@ -99,6 +99,7 @@ function ProjetDetail() {
       transition={{duration: 1}} className="projet__detail">
         <div className="titre__langage">
           <h2 className="titre__projet__detail">{projet.nom}</h2>
+        </div>
           <div className="langages">
             {projet.langages.map((langage: string, index: number) => (
               <span key={index} className="langage">
@@ -106,7 +107,6 @@ function ProjetDetail() {
               </span>
             ))}
           </div>
-        </div>
         <p>{projet.description}</p>
         <a className="lien__voir__site" href={projet.lien} target="_blank" rel="Lien site">Voir site</a>
         <div className="images__site">

@@ -7,6 +7,10 @@
     font-size: 1.3rem;
 }
 
+.description__page{
+    font-size: 105%;
+}
+
 .liste__projets {
     color: #000;
     font-weight: 400;
@@ -127,4 +131,39 @@
 
   .gestion__select{
     display: none;
+  }
+
+  @media screen and (max-width: 860px) {
+    .liste__projets {
+        margin: 5% 5%;
+    }
+    .projet-card {
+        flex-basis: 100%;
+    }
+    .gestion__btn{
+        margin: 3% 5%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+        .gestion__select{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3% 5%;
+        }
+
+        .gestion__select select{
+            flex-basis: 100%;
+            padding: 2% 3%;
+            border-radius: 20px;
+        }
+
+        .gestion__btn{
+            display: none;
+        }
+  }
+
+  select{
+    -webkit-appearance: none;
   }

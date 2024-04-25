@@ -133,3 +133,26 @@ textarea:focus{
 .lien__reseau:hover::after {
     width: 100%; 
 }
+
+@media screen and (max-width: 1000px){
+    .main__contact{
+        flex-direction: column-reverse;
+        gap: 5%;
+        margin: 5% 10%;
+    }
+
+    .main__contact > *{
+        flex-basis: 100%;
+    }
+
+    form{
+        max-height: 40rem;
+        width: 80%;
+    }
+    
+    .contenu__contact{
+        text-align: center;
+        margin: 2% 20% 10% 20%;
+    }
+    
+}
