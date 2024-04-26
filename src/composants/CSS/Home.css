@@ -5,7 +5,8 @@
 
 .main{
     margin-top: 25vh;
-    margin-right: 50%;
+    margin-right: 40%;
+    margin-bottom: 10vh;
 }
 
 .titre__accueil{
@@ -25,6 +26,8 @@
     gap: 30px;
     margin-top: 5rem;
 }
+
+.btn__projets__savoir__plus a{font-size: 80%;}
 
 .btn__projets__savoir__plus a:first-child{
     padding: 1rem 2rem;
