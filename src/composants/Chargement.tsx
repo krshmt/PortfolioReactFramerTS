@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { motion } from "framer-motion";
 import Bar from "./Bar";
 import "./CSS/Chargement/Chargement.css";

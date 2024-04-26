@@ -157,13 +157,20 @@
             flex-basis: 100%;
             padding: 2% 3%;
             border-radius: 20px;
+            margin-bottom: 2rem;
         }
 
         .gestion__btn{
             display: none;
         }
+
+        .description__page{
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
   }
 
   select{
     -webkit-appearance: none;
+    font-family: "Poppins", sans-serif;
   }

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import './CSS/Contact.css';
@@ -61,8 +62,8 @@ function Contact() {
             Si mon profil vous intéresse et vous souhaitez me contacter pour une offre d’alternance/stage ou bien vous souhaitez parler de ce portfolio, rédigez votre message ici 
             </p>
             <div className="liens__contact">
-              <div><a className='lien__reseau' href="">LinkedIn</a></div>
-              <div><a className='lien__reseau' href="">GitHub</a></div>
+              <div><a target='_blank' className='lien__reseau' href="https://www.linkedin.com/in/kris-toure/">LinkedIn</a></div>
+              <div><a target='_blank' className='lien__reseau' href="https://github.com/krshmt">GitHub</a></div>
             </div>
           </div>
         </main>

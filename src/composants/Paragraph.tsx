@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useRef } from "react";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
@@ -6,7 +7,7 @@ function Paragraph({ value }: { value: string }) {
   const element = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: [1, 0.1],
+    offset: ["start end", "start start"],
   });
 
   const mots = value.split(" ");

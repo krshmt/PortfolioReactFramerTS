@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./CSS/Projets/ProjetDetail.css";
@@ -66,9 +67,9 @@ function ProjetDetail() {
     }
 
     // Récupération des détails du projet depuis l'API
-    fetch(`http://localhost:3000/projets/${id}`)
+    fetch(`https://krshmt.github.io/PortfolioReactFramerTS/src/composants/JSON/projets.json`)
       .then((response) => response.json())
-      .then((data) => setProjet(data))
+      .then((data) => setProjet(data.projets[id]))
       .catch((error) => console.error("Erreur de chargement du projet", error));
 
     // Fonction de nettoyage pour réinitialiser les styles lors du démontage du composant

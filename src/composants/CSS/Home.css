@@ -1,10 +1,10 @@
 .div__centrage{
-    margin: 0 10%;
+    margin: 0 15%;
     font-weight: 200;
 }
 
 .main{
-    margin-top: 5%;
+    margin-top: 25vh;
     margin-right: 50%;
 }
 
@@ -77,7 +77,7 @@ a{
   
   @media screen and (max-width: 1160px){
     .main{
-        margin-top: 5%;
+        margin-top: 25vh;
         animation: slideUp 1s ease-in;
         margin-right: 0%;
         text-align: center;

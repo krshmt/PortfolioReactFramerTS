@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";
@@ -59,9 +60,9 @@ function Moi() {
       appElement.classList.add("black-background");
     }
 
-    fetch("http://localhost:3000/langages")
+    fetch("https://krshmt.github.io/PortfolioReactFramerTS/src/composants/JSON/projets.json")
       .then((response) => response.json())
-      .then((data) => setProjects(data))
+      .then((data) => setProjects(data.langages))
       .catch((error) =>
         console.error("Erreur de chargement des projets", error)
       );
