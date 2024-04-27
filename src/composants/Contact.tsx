@@ -13,7 +13,7 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('/sendmail', {
+      const response = await fetch('/.netlify/functions/sendmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ function Contact() {
         animate={{ y: 0, opacity: 1 }}
       >
         <main className="main__contact">
-          <form netlify onSubmit={handleSubmit}>
+          <form netlify action="/sendmail" method="POST" onSubmit={handleSubmit}>
             <input
               type="email"
               value={email}
