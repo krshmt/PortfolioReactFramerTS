@@ -1,9 +1,32 @@
-// @ts-nocheck
-import React, { useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import './CSS/Contact.css';
 
 function Contact() {
+
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch('http://localhost:3000/sendmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, message }),
+      });
+      const data = await response.json();
+      console.log(data);  // Traiter la réponse
+    } catch (error) {
+      console.error("erreur lors de envoi du formulaire", error);
+    }
+  };
+
+
+
   useEffect(() => {
     document.documentElement.classList.add("black-background");
 
@@ -41,16 +64,25 @@ function Contact() {
   return (
     <>
       <motion.div
-        transition={{duration: 0.8, delay:0.7}}
-        initial={{y: 100, opacity: 0 }}
-        animate={{y: 0,  opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
       >
         <main className="main__contact">
-          <form action="" method="post">
-            <input type="text" placeholder='Adresse mail' />
-            <input type="text" placeholder='Sujet' />
-            <textarea placeholder='Message' name="" id="" cols={30} rows={10}></textarea>
-            <div className="btn__center">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              placeholder="Votre email"
+            />
+            <textarea
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+              placeholder="Votre message"
+              name="" id="" cols={30} rows={10}
+            />
+             <div className="btn__center">
               <button className='btn__envoyer'>Envoyer mon message</button>
             </div>
           </form>
@@ -58,7 +90,7 @@ function Contact() {
             <h2 className="titre__contact">
               Établissons un contact ?
             </h2>
-            <p className='contact__p'></p>
+            <p className='contact__p'>Si vous souhaitez me contacter pour un contrat d'alternance ou parler de ce portfolio, remplissez ce formulaire</p>
             <div className="liens__contact">
               <div><a target='_blank' className='lien__reseau' href="https://www.linkedin.com/in/kris-toure/">LinkedIn</a></div>
               <div><a target='_blank' className='lien__reseau' href="https://github.com/krshmt">GitHub</a></div>
@@ -71,4 +103,10 @@ function Contact() {
 }
 
 export default Contact;
+
+
+
+
+
+
 
