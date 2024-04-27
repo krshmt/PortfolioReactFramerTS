@@ -73,7 +73,7 @@ function Contact() {
         animate={{ y: 0, opacity: 1 }}
       >
         <main className="main__contact">
-          <form onSubmit={handleSubmit}>
+          <form data-netlify="true" onSubmit={handleSubmit}>
             <input
               type="email"
               value={email}
