@@ -13,7 +13,7 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/sendmail', {
+      const response = await fetch('/sendmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
