@@ -1,10 +1,13 @@
 const express = require('express');
+const serverless = require('serverless-http');
+const router = express.Router();
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use('/.netlify/functions/app', router);
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
