@@ -134,8 +134,12 @@
   }
 
   @media screen and (max-width: 860px) {
+    .projets {
+        margin: 3rem 10%;
+    }
     .liste__projets {
         margin: 5% 5%;
+        gap: 20px;
     }
     .projet-card {
         flex-basis: 100%;

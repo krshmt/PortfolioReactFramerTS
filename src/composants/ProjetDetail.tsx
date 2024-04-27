@@ -53,12 +53,17 @@ function ProjetDetail() {
 
     const headerElement = document.querySelector("header");
     const liens = document.querySelectorAll(".lienheader");
+    
+    const barNav1 = document.querySelector(".b1");
+    const barNav2 = document.querySelector(".b2");
 
     if (headerElement && liens.length > 0) {
       headerElement.style.backgroundColor = "rgba(0, 0, 0, 0.12)";
       liens.forEach((lien) => {
         lien.style.color = "black";
       });
+      barNav1.style.backgroundColor = "black"; 
+      barNav2.style.backgroundColor = "black"; 
     }
 
     const appElement = document.querySelector(".App");
@@ -80,6 +85,8 @@ function ProjetDetail() {
         liens.forEach((lien) => {
           lien.style.color = "";
         });
+        barNav1.style.backgroundColor = ""; 
+        barNav2.style.backgroundColor = ""; 
       }
       if (appElement) {
         appElement.classList.remove("white-background");

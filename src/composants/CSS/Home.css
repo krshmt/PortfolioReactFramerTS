@@ -83,18 +83,17 @@ a{
         margin-top: 25vh;
         animation: slideUp 1s ease-in;
         margin-right: 0%;
-        text-align: center;
     }
     .div__centrage{
-        margin: 0 20%;
+        margin: 25rem 15% 0 15%;
         font-weight: 200;
     }
     .btn__projets__savoir__plus{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin-top: 5rem;
+        font-size: 90%;
+        gap: 10px;
+    }
+    .btn__projets__savoir__plus a{
+        padding: 5% 5% !important;
     }
   }
 
