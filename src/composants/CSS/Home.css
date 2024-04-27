@@ -80,11 +80,12 @@ a{
   
   @media screen and (max-width: 1160px){
     .main{
+        margin-top: 25vh;
         animation: slideUp 1s ease-in;
         margin-right: 0%;
     }
     .div__centrage{
-        margin: 25rem 15% 0 15%;
+        margin: 0 15% 0 15%;
         font-weight: 200;
     }
     .btn__projets__savoir__plus{
