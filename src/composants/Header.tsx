@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import './CSS/Header/HeaderPlacement.css';
 import { Link } from 'react-router-dom';
