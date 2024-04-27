@@ -87,7 +87,7 @@ function Contact() {
               name="" id="" cols={30} rows={10}
             />
             <div className="btn__center">
-              <button className='btn__envoyer'>Envoyer mon message</button>
+              <button className='btn__envoyer'>Ne fonctionne pas, c'est en cours</button>
             </div>
             <div className="btn__center">
               {isMailSent && <p className='confirmation__mail__envoyé'>Le courriel a été envoyé !</p>}
