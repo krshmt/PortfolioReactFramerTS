@@ -1,3 +1,4 @@
+//@ts-nocheck
 
 import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
@@ -7,6 +8,7 @@ function Contact() {
 
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isMailSent, setIsMailSent] = useState(false); // Nouvel état pour suivre l'état de l'envoi du courriel
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,12 +22,14 @@ function Contact() {
       });
       const data = await response.json();
       console.log(data);  // Traiter la réponse
+      // Réinitialiser les champs d'entrée et marquer le courriel comme envoyé
+      setEmail('');
+      setMessage('');
+      setIsMailSent(true);
     } catch (error) {
-      console.error("erreur lors de envoi du formulaire", error);
+      console.error("erreur lors de l'envoi du formulaire", error);
     }
   };
-
-
 
   useEffect(() => {
     document.documentElement.classList.add("black-background");
@@ -82,15 +86,18 @@ function Contact() {
               placeholder="Votre message"
               name="" id="" cols={30} rows={10}
             />
-             <div className="btn__center">
+            <div className="btn__center">
               <button className='btn__envoyer'>Envoyer mon message</button>
+            </div>
+            <div className="btn__center">
+              {isMailSent && <p className='confirmation__mail__envoyé'>Le courriel a été envoyé !</p>}
             </div>
           </form>
           <div className="contenu__contact">
             <h2 className="titre__contact">
               Établissons un contact ?
             </h2>
-            <p className='contact__p'>Si vous souhaitez me contacter pour un contrat d'alternance ou parler de ce portfolio, remplissez ce formulaire</p>
+            <p className='contact__p'>Si vous souhaitez me contacter pour un contrat d'alternance ou parler de ce portfolio, remplissez ce formulaire. Je vous répondrais dans les plus brefs délais.</p>
             <div className="liens__contact">
               <div><a target='_blank' className='lien__reseau' href="https://www.linkedin.com/in/kris-toure/">LinkedIn</a></div>
               <div><a target='_blank' className='lien__reseau' href="https://github.com/krshmt">GitHub</a></div>
@@ -103,10 +110,3 @@ function Contact() {
 }
 
 export default Contact;
-
-
-
-
-
-
-
