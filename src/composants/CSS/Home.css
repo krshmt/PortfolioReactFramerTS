@@ -80,7 +80,6 @@ a{
   
   @media screen and (max-width: 1160px){
     .main{
-        margin-top: 25vh;
         animation: slideUp 1s ease-in;
         margin-right: 0%;
     }

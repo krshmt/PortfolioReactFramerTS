@@ -12,7 +12,7 @@ function Header() {
   };
 
   const navVariants = {
-    open: { height: "35vh" },
+    open: { height: "330px" },
     closed: { height: "0%" }
   };
 
