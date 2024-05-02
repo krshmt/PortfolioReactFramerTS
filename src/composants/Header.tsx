@@ -80,8 +80,8 @@ function Header() {
                 <li><Link className="lienheader" to="/Contact">Contact</Link></li>
               </ul>
               <ul className='nav__reseau'>
-                <li><a className="nav__reseau__lien" href='' target='_blank'>LinkedIn</a></li>
-                <li><a className="nav__reseau__lien" href='' target='_blank'>GitHub</a></li>
+                <li><a className="nav__reseau__lien" href='https://www.linkedin.com/in/kris-toure/' target='_blank'>LinkedIn</a></li>
+                <li><a className="nav__reseau__lien" href='./Document/BUT_2_apprentissage_TOURE_CV.pdf' download>Télécharger mon CV</a></li>
               </ul>
             </motion.div>
           </motion.nav>
