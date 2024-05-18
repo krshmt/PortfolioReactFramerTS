@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./CSS/Header/HeaderBlanc.css";
 import "./CSS/Projets/Projet.css";
 import ImgDior from "./IMG/Gris_Dior.jpg";
@@ -20,8 +20,37 @@ function Projets() {
     ImgSpotMusic,
     ImgVintIK,
   ];
+  const [cursorText, setCursorText] = useState('');
+  const cursorRef = useRef(null);
 
   useEffect(() => {
+
+    const moveCursor = (e) => {
+      if (cursorRef.current) {
+        cursorRef.current.style.left = `${e.clientX+30}px`;
+        cursorRef.current.style.top = `${e.clientY+30}px`;
+      }
+    };
+
+    const handleLinkHover = (e) => {
+      setCursorText("Voir +"); // Set text to display in the cursor
+      cursorRef.current.classList.add("shrink");
+    };
+
+    const handleLinkMouseOut = () => {
+      setCursorText(""); // Remove text when not hovering
+      cursorRef.current.classList.remove("shrink");
+    };
+
+    const linksProjets = document.querySelectorAll('.projet-card');
+    linksProjets.forEach(link => {
+      link.addEventListener('mouseenter', handleLinkHover);
+      link.addEventListener('mouseleave', handleLinkMouseOut);
+    });
+
+    window.addEventListener("mousemove", moveCursor);
+
+
     document.documentElement.classList.add("white-background");
 
     const headerElement = document.querySelector("header");
@@ -53,6 +82,11 @@ function Projets() {
 
     // Fonction de nettoyage pour réinitialiser les styles lors du démontage du composant
     return () => {
+      window.removeEventListener("mousemove", moveCursor);
+      linksProjets.forEach(link => {
+        link.removeEventListener('mouseenter', handleLinkHover);
+        link.removeEventListener('mouseleave', handleLinkMouseOut);
+      });
       document.documentElement.style.backgroundColor = "";
       if (headerElement && liens.length) {
         headerElement.style.backgroundColor = "";
@@ -83,6 +117,7 @@ function Projets() {
 
   return (
     <>
+      <div ref={cursorRef} className="custom-cursor-home">{cursorText}</div>
       <motion.div
         transition={{duration: 0.8, delay:0.7}}
         initial={{y: 100, opacity: 0 }}

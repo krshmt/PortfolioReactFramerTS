@@ -34,8 +34,8 @@ function Moi() {
 
     const moveCursor = (e) => {
       if (cursorRef.current) {
-        cursorRef.current.style.left = `${e.clientX}px`;
-        cursorRef.current.style.top = `${e.clientY}px`;
+        cursorRef.current.style.left = `${e.clientX+30}px`;
+        cursorRef.current.style.top = `${e.clientY+30}px`;
       }
     };
 
@@ -86,8 +86,7 @@ function Moi() {
 
   return (
     <>
-      <div className="cursor-mask">
-        <div ref={cursorRef} className="custom-cursor"></div>
+        <div ref={cursorRef} className="custom-cursor-home"></div>
         <motion.main
           initial={{y: 100, opacity: 0}}
           animate={{y: 0, opacity: 1}}
@@ -125,7 +124,6 @@ function Moi() {
           ))}
         </motion.div>
       </motion.main>
-      </div>
     </>
   );
 }
