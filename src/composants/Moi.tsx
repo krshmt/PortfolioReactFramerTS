@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import React, { useState, useEffect, useRef } from "react";
 import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";
@@ -25,24 +25,11 @@ function Moi() {
     threshold: 0.2      // L'animation se déclenche lorsque 50% de l'élément est visible
   });
   const listeImages = [ImgReact, ImgFrameMotion, ImgTypeScript, ImgHtml, ImgCss, ImgJavaScript, ImgFigma, ImgGit];
-  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
-  const cursorRef = useRef(null);
+
 
 
 
   useEffect(() => {
-
-    const moveCursor = (e) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.left = `${e.clientX+30}px`;
-        cursorRef.current.style.top = `${e.clientY+30}px`;
-      }
-    };
-
-
-    window.addEventListener("mousemove", moveCursor);
-
-
     document.documentElement.classList.add("black-background");
 
     const headerElement = document.querySelector("header");
@@ -70,7 +57,6 @@ function Moi() {
     // Fonction de nettoyage pour réinitialiser les styles lors du démontage du composant
     return () => {
       document.documentElement.style.backgroundColor = "";
-      window.removeEventListener("mousemove", moveCursor);
       if (headerElement && liens.length > 0) {
         headerElement.style.backgroundColor = "";
         liens.forEach((lien) => {
@@ -86,7 +72,6 @@ function Moi() {
 
   return (
     <>
-        <div ref={cursorRef} className="custom-cursor-home"></div>
         <motion.main
           initial={{y: 100, opacity: 0}}
           animate={{y: 0, opacity: 1}}

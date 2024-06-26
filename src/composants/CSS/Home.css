@@ -5,41 +5,34 @@
 
 .main{
     margin-top: 25vh;
-    margin-right: 40%;
+    margin-right: 30%;
     margin-bottom: 10vh;
+    position: relative; /* Ajoutez ceci pour que les enfants puissent utiliser z-index par rapport à cet élément */
 }
 
 .titre__accueil{
     font-size: 300%;
     margin-bottom: 2rem;
-    font-weight: 200;
+    font-weight: 600;
+    position: relative; /* Assurez-vous que le titre a une position pour le z-index */
+    z-index: 10;
 }
 
 .paragraphe__accueil{
     font-size: 125%;
-    margin-bottom: 2rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    word-spacing: 0.15rem;
+    position: relative; /* Assurez-vous que le paragraphe a une position pour le z-index */
+    z-index: 10;
 }
 
-.btn__projets__savoir__plus{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-top: 5rem;
-}
-
-.btn__projets__savoir__plus a{font-size: 80%;}
-
-.btn__projets__savoir__plus a:first-child{
-    padding: 1rem 2rem;
-    background-color: black;
-    border: thin solid black;
-    border-radius: 10px;
-}
-
-.btn__projets__savoir__plus a:last-child{
-    border: thin solid white;
-    padding: 1rem 2rem;
-    border-radius: 10px;
+.paragraphe__accueil a{
+    color: white !important;
+    margin: 0 0.5rem;
+    border-bottom: 2px solid white;
+    position: relative; /* Assurez-vous que le lien a une position pour le z-index */
+    z-index: 10;
 }
 
 a{
@@ -52,33 +45,16 @@ a{
     text-decoration: none;
 }
 
-
-.custom-cursor-home {
+.animated-gif {
     position: fixed;
-    pointer-events: none;
-    width: 30px; /* Initial size */
-    height: 30px;
-    border-radius: 50%;
-    background-color: white; /* Ensure text contrast */
-    mix-blend-mode: difference;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, -50%);
-    color: black; /* Text color */
-    font-size: 20px; /* Adjustable based on your design */
-    transition: width 0.3s ease, height 0.3s ease; /* Smooth resizing transition */
-    z-index: 1000;
-    font-weight: 300;
-  }
+    bottom: 45%;
+    right: 20%;
+    width: 100vh;
+    z-index: 5; 
+    pointer-events: none; 
+}
   
-  .custom-cursor-home.shrink {
-    width: 90px; /* Bigger size when hovering over links */
-    height: 90px;
-    font-weight: bold;
-  }
-  
-  @media screen and (max-width: 1160px){
+@media screen and (max-width: 1160px){
     .main{
         margin-top: 25vh;
         animation: slideUp 1s ease-in;
@@ -95,18 +71,18 @@ a{
     .btn__projets__savoir__plus a{
         padding: 5% 5% !important;
     }
-  }
+}
 
-  @media screen and (max-width: 960px){
+@media screen and (max-width: 960px){
     .custom-cursor-home{
         display: none;
     }
-  }
+}
 
-  @media screen and (max-width: 530px){
+@media screen and (max-width: 530px){
     .titre__accueil{
         font-size: 200%;
         margin-bottom: 2rem;
         font-weight: 200;
     }
-  }
+}

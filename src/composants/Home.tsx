@@ -1,42 +1,15 @@
-// @ts-nocheck
-import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import './CSS/Home.css';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import "./CSS/Home.css";
+import { Link } from "react-router-dom";
+import gifProjets from "./GIF/animiertes-gif-von-online-umwandeln-de.gif";
+import gifMoi from "./GIF/quisuisje.gif";
+
 
 function Home() {
-  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
-  const [cursorText, setCursorText] = useState('');
-  const cursorRef = useRef(null);
+  const [hoveredLink, setHoveredLink] = useState('');
 
   useEffect(() => {
-
-    const moveCursor = (e) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.left = `${e.clientX+30}px`;
-        cursorRef.current.style.top = `${e.clientY+30}px`;
-      }
-    };
-
-    const handleLinkHover = (e) => {
-      setCursorText("Voir +"); // Set text to display in the cursor
-      cursorRef.current.classList.add("shrink");
-    };
-
-    const handleLinkMouseOut = () => {
-      setCursorText(""); // Remove text when not hovering
-      cursorRef.current.classList.remove("shrink");
-    };
-
-    const links = document.querySelectorAll('.lienAccueil');
-    links.forEach(link => {
-      link.addEventListener('mouseenter', handleLinkHover);
-      link.addEventListener('mouseleave', handleLinkMouseOut);
-    });
-
-    window.addEventListener("mousemove", moveCursor);
-
-
     document.documentElement.classList.add("black-background");
 
     const headerElement = document.querySelector("header");
@@ -54,14 +27,8 @@ function Home() {
       appElement.classList.add("black-background");
     }
 
-    // Fonction de nettoyage pour réinitialiser les styles lors du démontage du composant
     return () => {
       document.documentElement.style.backgroundColor = "";
-      window.removeEventListener("mousemove", moveCursor);
-      links.forEach(link => {
-        link.removeEventListener('mouseenter', handleLinkHover);
-        link.removeEventListener('mouseleave', handleLinkMouseOut);
-      });
       if (headerElement && liens.length > 0) {
         headerElement.style.backgroundColor = "";
         liens.forEach((lien) => {
@@ -80,18 +47,66 @@ function Home() {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.7 }}
-      className='div__centrage'>
-      <div ref={cursorRef} className="custom-cursor-home">{cursorText}</div>
-      <main className='main'>
-        <h2 className='titre__accueil'>Développeur WEB</h2>
-        <p className='paragraphe__accueil'>Bienvenue sur mon portfolio ! Je suis Kris, étudiant en BUT Informatique et passionné par le développement WEB.</p>
-        <div className="btn__projets__savoir__plus">
-          <Link className='lienAccueil' to="/Projets">Voir mes projets</Link>
-          <Link className='lienAccueil' to="/Moi">En savoir plus sur moi</Link>
-        </div>
+      className="div__centrage"
+    >
+      <main className="main">
+        <h2 className="titre__accueil">
+          Je suis étudiant développeur WEB en quête d'une alternance{" "}
+        </h2>
+        <p className="paragraphe__accueil">
+          Bienvenue sur mon portfolio !{" "}
+        </p>
+        <p className="paragraphe__accueil">
+          Vous pouvez découvrir{" "}
+          <Link
+            to="/Projets"
+            onMouseEnter={() => setHoveredLink("projets")}
+            onMouseLeave={() => setHoveredLink("")}
+            className="hover-link"
+          >
+            mes projets
+          </Link>{" "}
+          ou{" "}
+          <Link
+            to="/Moi"
+            onMouseEnter={() => setHoveredLink("moi")}
+            onMouseLeave={() => setHoveredLink("")}
+            className="hover-link"
+          >
+            en apprendre un peu plus sur moi
+          </Link>
+        </p>
+        <AnimatePresence>
+          {hoveredLink === "projets" && (
+            <motion.img
+              key="gif-projets"
+              src={gifProjets}
+              alt="GIF Projets"
+              initial={{ y: '100%', opacity: 0, rotate: 0 }}
+              animate={{ y: '50%', opacity: 1, rotate: 5 }}
+              exit={{ y: '100%', opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="animated-gif"
+            />
+          )}
+          {hoveredLink === "moi" && (
+            <motion.img
+              key="gif-moi"
+              src={gifMoi}
+              alt="GIF Moi"
+              initial={{ y: '100%', opacity: 0, rotate: 0 }}
+              animate={{ y: '50%', opacity: 1, rotate: -5 }}
+              exit={{ y: '100%', opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="animated-gif"
+            />
+          )}
+        </AnimatePresence>
       </main>
     </motion.div>
   );
 }
 
+
 export default Home;
+ 
