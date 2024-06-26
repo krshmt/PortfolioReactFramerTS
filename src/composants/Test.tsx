@@ -38,9 +38,30 @@ function Test(){
     
 
     return (
-        <div style={{color: "black"}}>
-            <h1>modification</h1>
+      <motion.main
+      initial={{y: 100, opacity: 0}}
+      animate={{y: 0, opacity: 1}}
+      transition={{duration: 0.8, delay:0.7}}
+      className="mainMoi"
+    >
+
+      
+    <motion.div 
+      ref={ref}
+      initial={{ opacity: 0, y: 300 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
+      transition={{ duration: 1 }}
+      className="liste__competence"
+    >
+      {projects.map((project, index) => (
+        <div key={index} className="competence">
+          <img src={listeImages[index]} alt={project.name} />
+          <h3>{project.h3}</h3>
+          <p className="description__competence">{project.p.text}</p>
         </div>
+      ))}
+    </motion.div>
+  </motion.main>
     );
 }
 

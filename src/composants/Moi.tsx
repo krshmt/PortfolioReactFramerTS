@@ -1,8 +1,7 @@
-// @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import Paragraph from "./Paragraph";
-import { motion } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "./CSS/Moi.css";
 
 import ImgReact from "./IMG/logo-react.svg";
@@ -14,20 +13,23 @@ import ImgJavaScript from "./IMG/logo-js.svg";
 import ImgFigma from "./IMG/logo-figma.svg";
 import ImgGit from "./IMG/logo-git.svg";
 
-const paragraphe = "Bonjour, je m'appelle Kris. Actuellement en deuxième année de BUT Informatique à l'Université d'Orléans, je suis passionné par le développement web et les technologies numériques. Je recherche activement un contrat d'apprentissage dans une agence web.";
-const paragraphe2 = "Passionné par le développement web, je suis constamment à la recherche de nouvelles technologies à maîtriser, ce qui me permet de rester à la pointe de l'innovation dans ce domaine en rapide évolution.";
-const paragraphe3 = "Mon objectif est de rejoindre une équipe dynamique en tant qu'alternant, où je pourrais développer mes compétences techniques sous la mentorat de développeurs seniors expérimentés.";
+import gifWebDesign from "./GIF/amazing-spiderman-webdesign.gif";
+import gifTakeMe from "./GIF/take-me-now-spongebob.gif";
 
 function Moi() {
   const [projects, setProjects] = useState([]);
-  const { ref, inView } = useInView({
-    triggerOnce: false, // L'animation ne se déclenche qu'une seule fois
-    threshold: 0.2      // L'animation se déclenche lorsque 50% de l'élément est visible
-  });
-  const listeImages = [ImgReact, ImgFrameMotion, ImgTypeScript, ImgHtml, ImgCss, ImgJavaScript, ImgFigma, ImgGit];
+  const listeImages = [
+    ImgReact,
+    ImgFrameMotion,
+    ImgTypeScript,
+    ImgHtml,
+    ImgCss,
+    ImgJavaScript,
+    ImgFigma,
+    ImgGit,
+  ];
 
-
-
+  const [hoveredLink, setHoveredLink] = useState("");
 
   useEffect(() => {
     document.documentElement.classList.add("black-background");
@@ -47,7 +49,9 @@ function Moi() {
       appElement.classList.add("black-background");
     }
 
-    fetch("https://krshmt.github.io/PortfolioReactFramerTS/src/composants/JSON/projets.json")
+    fetch(
+      "https://krshmt.github.io/PortfolioReactFramerTS/src/composants/JSON/projets.json"
+    )
       .then((response) => response.json())
       .then((data) => setProjects(data.langages))
       .catch((error) =>
@@ -72,43 +76,61 @@ function Moi() {
 
   return (
     <>
-        <motion.main
-          initial={{y: 100, opacity: 0}}
-          animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.8, delay:0.7}}
-          className="mainMoi"
-        >
-        <div className="div__1">
-          <h2 className="titre__scroll">Scroll pour en savoir plus sur moi</h2>
-          <div className="scroll-downs">
-            <div className="mousey">
-              <div className="scroller"></div>
-            </div>
-          </div>
-        </div>
-        <Paragraph value={paragraphe} />
-        <div className="div__1">
-          <Paragraph value={paragraphe2} />
-        </div>
-        <div className="div__2">
-          <Paragraph value={paragraphe3} />
-        </div>
-        <motion.div 
-          ref={ref}
-          initial={{ opacity: 0, y: 300 }}
-          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
-          transition={{ duration: 1 }}
-          className="liste__competence"
-        >
-          {projects.map((project, index) => (
-            <div key={index} className="competence">
-              <img src={listeImages[index]} alt={project.name} />
-              <h3>{project.h3}</h3>
-              <p className="description__competence">{project.p.text}</p>
-            </div>
-          ))}
-        </motion.div>
-      </motion.main>
+      <motion.div className="a-propos"
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.7 }}>
+        <h3>A propos</h3>
+        <h2>Kris Touré</h2>
+        <p>
+          Actuellement, je suis un étudiant de deuxième année en BUT
+          Informatique qui est passionné par le développement WEB. Je suis plus
+          orienté par le côté <strong
+          onMouseEnter={() => setHoveredLink("web")}
+          onMouseLeave={() => setHoveredLink("")}
+          className="hover-link"
+          > Front-End et design </strong> 
+          des sites WEB
+          car cela permet d'exprimer sa créativité et d'avoir une variété de
+          projets.
+        </p>
+        <p>
+          Je suis à la <strong
+          onMouseEnter={() => setHoveredLink("takeme")}
+          onMouseLeave={() => setHoveredLink("")}
+          className="hover-link">recherche d'un contrat d'apprentissage</strong>{" "}
+          au sein d'une agence web qui valorise autant les fonctionnalités que
+          le design des projets. Travailler dans une agence qui aspire à offrir
+          des projets à forte valeur ajoutée correspond parfaitement à mes
+          valeurs et à mes ambitions professionnelles.
+        </p>
+      </motion.div>
+      <AnimatePresence>
+          {hoveredLink === "web" && (
+            <motion.img
+              key="gif-web-design"
+              src={gifWebDesign}
+              alt="GIF Projets"
+              initial={{ y: '100%', opacity: 0, rotate: 0 }}
+              animate={{ y: '50%', opacity: 1, rotate: 5 }}
+              exit={{ y: '100%', opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="animated-gif-moi-un"
+            />
+          )}
+          {hoveredLink === "takeme" && (
+            <motion.img
+              key="gif-take-me"
+              src={gifTakeMe}
+              alt="GIF Moi"
+              initial={{ y: '100%', opacity: 0, rotate: 0 }}
+              animate={{ y: '50%', opacity: 1, rotate: -5 }}
+              exit={{ y: '100%', opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="animated-gif-moi-deux"
+            />
+          )}
+        </AnimatePresence>
     </>
   );
 }

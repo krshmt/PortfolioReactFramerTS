@@ -1,85 +1,38 @@
-.mainMoi {
-  position: relative; 
-  margin: 0 20%;
-  overflow: hidden; 
-}
-
-main p {
-  font-size: 1.7vw;
-  font-weight: 400;
-  margin: 2rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  line-height: 1;
-  transition: color 0.3s ease-in-out; 
-}
-.mot {
-  margin-right: 12px;
-  margin-top: 12px;
+.a-propos{
   position: relative;
+  z-index: 10;
+  margin: 10% 35% 0 15%;
 }
 
-.shadow {
-  position: absolute;
-  opacity: 0.1;
+.a-propos h2{
+  font-size: 3rem;
+  margin-top: 0;
 }
 
-.div__1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 120vh;
-}
-
-.div__2 {
-  height: 80vh;
-}
-
-.div__1:first-child {
-  height: 60vh;
-  margin-bottom: 20vh;
-}
-
-.titre__scroll {
-  font-size: 2.5rem;
+.a-propos p{
   font-weight: 400;
-  margin: 2rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  line-height: 1;
 }
 
-.scroll-downs {
-  width: 34px;
-  height: 55px;
+strong{
+  border-bottom: 2px solid white;
 }
 
-.mousey {
-  width: 3px;
-  padding: 10px 15px;
-  height: 35px;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
+.animated-gif-moi-un {
+  position: fixed;
+  bottom: 45%;
+  right: 10%;
+  width: 80vh;
+  z-index: 5; 
+  pointer-events: none; 
 }
 
-.scroller {
-  width: 3px;
-  height: 10px;
-  border-radius: 25%;
-  background-color: #fff;
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(.15, .41, .69, .94);
-  animation-iteration-count: infinite;
-}
-
-@keyframes scroll {
-  0% { opacity: 0; }
-  10% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(15px); opacity: 0;}
+.animated-gif-moi-deux {
+  position: fixed;
+  bottom: 35%;
+  right: 10%;
+  width: 80vh;
+  z-index: 5; 
+  pointer-events: none; 
 }
 
 .liste__competence {
@@ -101,34 +54,16 @@ main p {
   min-width: 150px;
 }
 
+.competence p{
+  font-weight: 400;
+}
+
 .description__competence {
   font-size: 0.75rem;
 }
 
 .competence img {
   width: 3rem;
-}
-
-/* CSS/Moi.css */
-.cursor-mask {
-  cursor: none;
-}
-
-.masked-text {
-  mask-image: radial-gradient(circle, white 100%, black 100%);
-  -webkit-mask-image: radial-gradient(circle, white 100%, black 100%);
-}
-
-.custom-cursor {
-  position: fixed;
-  pointer-events: none;
-  width: 70px; 
-  height: 70px;
-  border-radius: 50%;
-  background: white; 
-  mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
-  z-index: 1000; 
 }
 
 
@@ -148,9 +83,4 @@ main p {
   .titre__scroll{
     text-align: center;
   }
-}
-
-.lien__dl__cv{
-  color: #fff;
-  margin-bottom: 10vh;
 }
