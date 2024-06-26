@@ -1,7 +1,13 @@
 .a-propos{
   position: relative;
   z-index: 10;
-  margin: 10% 35% 0 15%;
+  margin: 10% 35% 15% 15%;
+}
+
+.parcours__experience{
+  position: relative;
+  z-index: 10;
+  margin: 10% 35% 15% 15%;
 }
 
 .a-propos h2{
@@ -9,12 +15,16 @@
   margin-top: 0;
 }
 
-.a-propos p{
+.a-propos p, .parcours__experience p{
   font-weight: 400;
 }
 
 strong{
   border-bottom: 2px solid white;
+}
+
+strong > a{
+  color: white;
 }
 
 .animated-gif-moi-un {
@@ -42,6 +52,7 @@ strong{
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+  margin: 0 15% 10% 15%;
 }
 
 .competence {
