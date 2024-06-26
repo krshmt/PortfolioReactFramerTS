@@ -8,6 +8,7 @@ import ImgPortfolio from "./IMG/Portfolio.png";
 import ImgEscrime from "./IMG/Escrime.png";
 import ImgSpotMusic from "./IMG/SpotMusic.png";
 import ImgVintIK from "./IMG/FV.png";
+import gifHubLo from "./GIF/Insta-Hub-lo_2.gif"
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -20,6 +21,7 @@ function Projets() {
     ImgEscrime,
     ImgSpotMusic,
     ImgVintIK,
+    gifHubLo
   ];
 
   useEffect(() => {

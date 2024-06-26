@@ -39,7 +39,15 @@
             "description" : "En cours :)",
             "lien" : "",
             "langages" : ["React", "TypeScript", "Framer Motion", "CSS"]
-        }
+        },
+        {
+          "id" : 5,
+          "nom" : "Hub-Lo",
+          "realisation" : "Projet Stage",
+          "description" : "Projet réalisé en stage de deuxième année de BUT Informatique. L'objectif de ce stage, faire la refonte du site du consortium avec l'ajout de fonctionnalités. Durée du stage : 2 mois",
+          "lien" : "https://hub-lo.fr/",
+          "langages" : ["HTML", "CSS", "JS", "Wordpress", "Elementor", "Brevo", "Plesk", "Figma" ]
+      } 
     ],
     "langages" : [
         {
