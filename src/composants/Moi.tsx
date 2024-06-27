@@ -36,6 +36,12 @@ function Moi() {
 
     const headerElement = document.querySelector("header");
     const liens = document.querySelectorAll(".lienheader");
+    const cursor1 = document.querySelector(".cursor")
+    const cursor2 = document.querySelector(".cursor2")
+
+    cursor1.style.border = "1px solid white"
+    cursor2.style.backgroundColor = "white"
+    
 
     if (headerElement && liens.length > 0) {
       headerElement.style.backgroundColor = "rgba(0, 0, 0, 0.41)";
@@ -67,6 +73,8 @@ function Moi() {
           lien.style.color = "";
         });
       }
+      cursor1.style.border = ""
+      cursor2.style.backgroundColor = ""
       if (appElement) {
         appElement.classList.remove("black-background");
         document.documentElement.classList.remove("black-background");

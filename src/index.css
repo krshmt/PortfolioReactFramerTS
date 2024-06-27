@@ -4,11 +4,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #080808;
+  background-color: #202020;
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
+  cursor: none;
 }
 
 * {
@@ -22,7 +23,7 @@ html, body {
 }
 
 .black-background {
-  background-color: #080808;
+  background-color: #0f0f0f;
   transition: all 0.7s ease-in-out;
 }
 

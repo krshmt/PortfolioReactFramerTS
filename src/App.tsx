@@ -10,6 +10,8 @@ import Moi from "./composants/Moi";
 import Contact from "./composants/Contact";
 import ProjetDetail from "./composants/ProjetDetail";
 import Test from "./composants/Test";
+import Bouton from "./composants/Bouton";
+import CursorComponent from "./composants/CursorComponent";
 
 class App extends React.Component {
   constructor(props) {
@@ -35,6 +37,7 @@ class App extends React.Component {
           <Chargement />
         ) : (
           <Router>
+            <CursorComponent />
             <Header />
             <Switch>
               <Route path="/" exact component={Home} />
@@ -44,6 +47,7 @@ class App extends React.Component {
               <Route path="/projet/:id" exact component={ProjetDetail} />
               <Route path="/test" exact component={Test} />
             </Switch>
+            <Bouton/>
           </Router>
         )}
       </div>

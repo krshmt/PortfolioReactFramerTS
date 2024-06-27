@@ -5,15 +5,14 @@
 
 .main{
     margin-top: 25vh;
-    margin-right: 30%;
     margin-bottom: 10vh;
     position: relative; /* Ajoutez ceci pour que les enfants puissent utiliser z-index par rapport à cet élément */
 }
 
 .titre__accueil{
-    font-size: 300%;
+    font-size: 400%;
     margin-bottom: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     position: relative; /* Assurez-vous que le titre a une position pour le z-index */
     z-index: 10;
 }
