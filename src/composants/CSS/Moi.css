@@ -31,7 +31,7 @@ strong > a{
   position: fixed;
   bottom: 45%;
   right: 10%;
-  width: 80vh;
+  width: 40vw;
   z-index: 5; 
   pointer-events: none; 
 }
@@ -75,6 +75,12 @@ strong > a{
 
 .competence img {
   width: 3rem;
+}
+
+@media screen and (max-width:1160px) {
+  .animated-gif-moi-un, .animated-gif-moi-deux{
+    display: none;
+  }
 }
 
 
