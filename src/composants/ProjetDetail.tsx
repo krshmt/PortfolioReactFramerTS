@@ -22,6 +22,11 @@ import ImgMusic2 from "./IMG/Musique2.png";
 import ImgVintIK from "./IMG/FV.png";
 import ImgVintIK1 from "./IMG/image 4.png";
 import ImgVintIK2 from "./IMG/image 5.png";
+
+import gifHubLo from "./GIF/Insta-Hub-lo_2.gif";
+import ImgHubLo1 from "./IMG/conference-hubLo.jpg";
+import ImgHubLo from "./IMG/hubLo.png"
+
 import { motion } from "framer-motion";
 
 function ProjetDetail() {
@@ -46,6 +51,7 @@ function ProjetDetail() {
     2 : [ImgEscrime1, ImgEscrime2, ImgEscrime3],
     3 : [ImgSpotMusic, ImgMusic1, ImgMusic2],
     4 : [ImgVintIK, ImgVintIK1, ImgVintIK2],
+    5 : [gifHubLo, ImgHubLo1, ImgHubLo]
   };
 
   useEffect(() => {
@@ -72,7 +78,7 @@ function ProjetDetail() {
     }
 
     // Récupération des détails du projet depuis l'API
-    fetch(`https://krshmt.github.io/PortfolioReactFramerTS/src/composants/JSON/projets.json`)
+    fetch(`https://krshmt.github.io/portfolio-premiere-annee/projets.json`)
       .then((response) => response.json())
       .then((data) => setProjet(data.projets[id]))
       .catch((error) => console.error("Erreur de chargement du projet", error));

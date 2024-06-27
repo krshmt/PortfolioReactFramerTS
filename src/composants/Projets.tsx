@@ -50,8 +50,8 @@ function Projets() {
       appElement.classList.add("white-background");
     }
 
-    
-    fetch("https://krshmt.github.io/PortfolioReactFramerTS/src/composants/JSON/projets.json")
+
+    fetch("https://krshmt.github.io/portfolio-premiere-annee/projets.json")
       .then((response) => response.json())
       .then((data) => setProjets(data.projets))
       .catch((error) =>
